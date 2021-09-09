@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner entrada = new Scanner(System.in);
+	    
+	        System.out.println("Informe sua idade: ");
+	        int idade = entrada.nextInt();
+	        
+	        if (idade < 16){
+	            System.out.println("Usuário não pode votar!");
+	        }else{
+	            System.out.println("Usuário pode votar!");
+	        }
+	    
+	    
+	    
+		
+	}
+}
