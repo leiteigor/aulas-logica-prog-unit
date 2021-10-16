@@ -1,0 +1,41 @@
+/******************************************************************************
+
+Escreva um programa para receber a quantidade de pessoas
+contraminadas com o corona vírus nas 5 cidades principais 
+cidades de um estado. 
+Ao final mostrar quantas cidades tiveram pessoas contaminadas iguais ou superiores a média geral
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner entrada = new Scanner(System.in);
+	    
+	    int[] nrContaminados = new int [5];
+	    double media = 0;
+	    int maiorIgualMedia = 0;
+	    
+	    
+	    for (int i = 0; i < 5; i++){
+	        System.out.printf("Numero de contaminados da %dª cidade:  ", (i + 1));
+	        nrContaminados[i] = entrada.nextInt();
+	        media = media + nrContaminados[i];
+	    }//fim for 
+	    
+	    media = media / 5;
+	    System.out.println("Média de contaminados: " + media);
+	    
+	    for (int i = 0; i < 5; i++){  
+	        if (nrContaminados[i] >= media){ //compara o vetor com a media
+	            maiorIgualMedia++;
+	        }//fim se 
+	    }//fim for 
+	    System.out.println("Quantidade de cidades com contaminação acima da média: " + maiorIgualMedia);
+	    
+	    
+	    
+}//fim main
+}//fim classe
