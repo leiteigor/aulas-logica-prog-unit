@@ -1,0 +1,30 @@
+/******************************************************************************
+
+Escreva um programa para receber um número inteiro e mostrar todos os números pares
+positivos do número digitado até 0.
+
+Criado por Igor Leite 
+Data 23/09/21
+Prof Aldo Lima 
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in); 
+		System.out.println("Digite o numero desejado");
+		int limite = entrada.nextInt();
+		int contador = 0;
+		
+		/*Inicia i igual a zero*//*Quantidade de vezes que irá se repetir*//*Adiciona menos 2*/
+		for (int i = limite;                     i >= 0;                          i=i - 2 ){
+		    // System.out.println(i);
+		    
+
+		        System.out.println(i);
+		   
+		}//fim for 
+	}
+}

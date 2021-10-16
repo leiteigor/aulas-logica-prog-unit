@@ -1,0 +1,46 @@
+/*
+Código para criar um contador
+Aluno Igor Leite
+Prof Aldo Lima
+Disciplina LOG. E PROG.
+Faculdade UNIT
+*/
+
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner entrada = new Scanner(System.in);
+	    
+	    char curso = ' ';
+	    int contador = 0;
+	    
+        while (curso != 'G' && curso != 'P'){
+            
+            System.out.println("Digite o código do curso [G/P]");
+    	    curso = entrada.nextLine().charAt(0); //indica primeira posição, apenas
+    	    curso = Character.toUpperCase(curso); //Coloca a entrada maiuscula
+    	    
+            if (curso != 'G' && curso != 'P'){
+        	    System.out.println("Código incorreto! Digite G ou P");
+    
+            }//fim if
+            
+            contador = contador + 1;
+            
+	    }// fim while
+	    
+	    if (curso == 'G'){
+	    System.out.println("Você digitou Gradução");
+	    
+	    }else{
+	        
+	    System.out.println("Você digitou Pós-Gradução");
+	    }//fim else 
+	    
+	    System.out.printf("Você acertou na %d tentativa", contador);
+	}
+}
